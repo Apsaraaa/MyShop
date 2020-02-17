@@ -10,13 +10,14 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
+    
     <tr>
+        <th>
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image)
-        </th>
+       
         <th>
             @Html.DisplayNameFor(model => model.Category)
         </th>
@@ -32,11 +33,12 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            <img class="img-thumbnail" style="height:50px" src="~/Content/ProductImages/item.image"/>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.image)
+            @Html.DisplayFor(modelItem => item.Name)
         </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.Category)
         </td>
